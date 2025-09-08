@@ -1,0 +1,101 @@
+
+Kubernetes configuration on Docker Desktop
+==========================================
+
+Settings -> Kubernetes -> Enable Kubernetes
+
+Keep everything default
+
+Click Apply & restart
+
+To install Kubernetes on Virtual Machine on AWS Cloud - Manual/ Azure Cloud
+====================================================
+- Kubernetes Client ( CLI) - Kubectl
+
+Installing kubectl, the Kubernetes command-line tool, allows interaction with Kubernetes clusters. 
+https://kubernetes.io/docs/tasks/tools/
+
+
+
+- Kubernetes Cluster  --> Use Kubernetes Tools  to installs
+
+1. Kind
+2. Minikube - https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download
+3. Kubeadm
+
+pre-requisite of installing Kubernetes cluster - container runtime (Docker, containerd, Podman)
+
+Install Kubernetes using AWS EKS (Elastic Kubernetes Service) / Azure AKS 
+==========================================================
+AWS will create the Kubernetes cluster
+
+What is Kubernetes
+- Kubernetes is an open source tool to manage containers. called as Orchestration tool.
+
+Managing : Scaling the containers (Increase / decrease the containers), managing the resources (CPU, RAM), deploy the application, automate the task of managing containers
+
+Product App (normal days : 10 instances --------------> 100 instances)
+
+
+Kubernetes topics
+  - deployments of containers
+  - network: services
+  - volumes
+  - Secrets and ConfigMap
+  - StatefulSet
+  - Ingress comtrollers
+  - namespaces
+ 
+ HELM CHART - Prometheus & Grafana (Monitoring the Kubernetes cluster)
+
+
+Kubernetes architecture
+ - Kubernetes cluster - A cluster is a logical group of machines (physical machine/ Virtual machines)
+
+1 one cluster
+1- Master node (Same machine/ separate VM)
+1 or more worker nodes (Same machine / Separate VM)
+
+Worker Nodes will run PODS 
+
+1 POD = 1 or more containers  (1 container run application + other will be helper container. ex: take logs)
+1 container == 1application
+
+1 POD = 1 Container = 1 Application
+
+
+DockerDesktop Kubernetes (Kubeadm tool)
+1 cluster = 1 Control Plane + 1 WorkerNode
+
+
+What is a POD?
+  - Smallest Deployable unit (First-class Citizen)
+
+
+
+Commands  for Kubectl
+
+>kubectl version
+
+> kubectl get nodes
+
+> kubectl get nodes -o wide
+
+> kubectl get pods
+
+> kubectl get deployments
+
+> kubectl get services
+
+kubectl run <pod-name> --image=<image-name>
+
+
+
+
+
+
+
+
+ 
+
+
